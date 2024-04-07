@@ -1,0 +1,14 @@
+.nav_Links ul li {
+  padding: 4px;
+  margin: 4px;
+}
+
+.nav_Links {
+  display: flex;
+  align-items: center;
+  justify-content: end;
+}
+
+.header_Parents {
+  border: 1px solid burlywood;
+}
