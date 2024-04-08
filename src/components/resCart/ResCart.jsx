@@ -19,6 +19,8 @@ console.log(searchItem)
   }
 
   function handleSearch() {
+
+    
    
    
       const filteredData = cardData.filter(item =>
