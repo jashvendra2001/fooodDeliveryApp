@@ -1,0 +1,30 @@
+.footer {
+    background-color: #333;
+    color: #fff;
+    padding: 50px 0;
+  }
+  
+  .footer h4 {
+    color: #fff;
+  }
+  
+  .footer p {
+    color: #ccc;
+  }
+  
+  .social-icons a {
+    color: #fff;
+    margin-right: 10px;
+  }
+  
+  .bottom-bar {
+    background-color: #222;
+    padding: 10px 0;
+  }
+  
+  .bottom-bar p {
+    color: #ccc;
+    text-align: center;
+    margin: 0;
+  }
+  

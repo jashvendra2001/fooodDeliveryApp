@@ -1,18 +1,20 @@
-import logo from './logo.svg';
-import './App.css';
-import Header from './components/header/Header';
-import Body from './components/body/Body';
-import Footer from './components/footer/Footer';
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import ResCart from './components/resCart/ResCart';
+import Contect from './components/contact/Contect';
+import Header  from './components/header/Header'
+import Footer from './components/footer/Footer'
 
 function App() {
   return (
-    <>
-    <div className='container'>
-      <Header/>
-      <Body/>
+    <Router>
+     <Header/>
+      <Routes>
+        <Route path="/" element={<ResCart />} />
+        <Route path="/contact/:Id" element={<Contect />} />
+      </Routes>
       <Footer/>
-    </div>
-    </>
+    </Router>
   );
 }
 
