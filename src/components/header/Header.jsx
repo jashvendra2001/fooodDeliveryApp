@@ -1,6 +1,15 @@
-import React from 'react'
-import "./header.css"
+import React, { useEffect } from 'react'
+import "./header.css";
+import { Link } from "react-router-dom";
+import { useState } from 'react';
 const Header = () => {
+  const[logbtn,setLogbtn]=useState(false)
+
+
+function handleToggle()
+{
+  setLogbtn(!logbtn)
+}
   return (
     <div className="header_Parents flex">
         <div className="logo  flex-auto w-32">
@@ -8,10 +17,14 @@ const Header = () => {
         </div>
         <div className="nav_Links  flex-auto w-64">
             <ul className=' flex '>
+                <li >
+                  <Link to='/contact/:20001'> contact </Link>
+                  </li>
                 <li>Home</li>
                 <li>Home</li>
                 <li>Home</li>
-                <li>Home</li>
+                <button onClick={handleToggle}>{logbtn ? 'Logout' : 'Login'}</button>
+
             </ul>
         </div>
     </div>

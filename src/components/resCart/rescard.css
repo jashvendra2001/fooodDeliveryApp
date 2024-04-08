@@ -1,8 +1,8 @@
 .resCard {
-  width: 182px;
-  height: 257px;
+  width: 217px;
+  height: 307px;
   background-color: #f0f0f0;
-  padding: 2px;
+  padding: 6px;
 }
 .resCard:hover {
   border: 2px solid black;
