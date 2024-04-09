@@ -1,14 +1,18 @@
 import React, { useEffect, useState } from 'react';
 import "./rescard.css";
+import { Link } from 'react-router-dom';
+
 
 const ResCart = () => {
   const [cardData, setCardData] = useState([]);
   const [dupliData, setDupliData] = useState([]);
   const[searchItem,setSearchItem]=useState("");
 
-
+ 
 console.log(searchItem)
   function handleRating() {
+
+   
     const filterData = [...cardData];
     setDupliData(filterData.filter((item) => item.info.avgRating > 4));
   }
@@ -48,6 +52,10 @@ console.log(searchItem)
     }
   };
 
+
+
+  
+
   useEffect(() => {
     
     
@@ -74,7 +82,9 @@ console.log(searchItem)
           dupliData.length === 0 ? "data is fetching..." : dupliData.map((item) => {
             console.log(item.info.cuisines.map((items) => items))
             return (
-              <div className="resCard" key={item.info.id}>
+
+              <Link to={`res/${item.info.id}`}  key={item.info.id}>
+                <div className="resCard"  >
                 <div className="img">
                   <img src={`https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/${item.info.cloudinaryImageId}`} alt="" />
                 </div>
@@ -83,6 +93,8 @@ console.log(searchItem)
                 <h4>{item.info.avgRating}</h4>
                 <h4>{item.info.sla.deliveryTime}"minutes"</h4>
               </div>
+              </Link>
+             
             )
           })
         }
